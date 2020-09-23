@@ -34,25 +34,25 @@ public class StudentDetailsDAO {
             String selectSQL="SELECT studentid,firstname,lastname,photoname,emergencycontact FROM attendance_system.studentdetails;";
             Statement insertAccount = con.createStatement();
             ResultSet resultSet=insertAccount.executeQuery(selectSQL);
-                if (resultSet != null) {
-                    listStudent = new ArrayList();
-                    while (resultSet.next()) {
-                        StudentDetails student = new StudentDetails();
-                        int studentId = resultSet.getInt(1);
-                        String firstName = resultSet.getString(2);
-                        String lastName = resultSet.getString(3);
-                        String photoName = resultSet.getString(4);
-                        String emergencycontact = resultSet.getString(5);
-                        student.setStudentid(studentId);
-                        student.setFirstname(firstName);
-                        student.setLastname(lastName);
-                        student.setPhotoname(photoName);
-                        student.setEmergencycontact(emergencycontact);
-                        //System.out.println(student.toString());
-                        listStudent.add(student);
-                    }
-               }
-            }catch(SQLException e){
+            if (resultSet != null) {
+                listStudent = new ArrayList();
+                while (resultSet.next()) {
+                    StudentDetails student = new StudentDetails();
+                    int studentId = resultSet.getInt(1);
+                    String firstName = resultSet.getString(2);
+                    String lastName = resultSet.getString(3);
+                    String photoName = resultSet.getString(4);
+                    String emergencycontact = resultSet.getString(5);
+                    student.setStudentid(studentId);
+                    student.setFirstname(firstName);
+                    student.setLastname(lastName);
+                    student.setPhotoname(photoName);
+                    student.setEmergencycontact(emergencycontact);
+                    //System.out.println(student.toString());
+                    listStudent.add(student);
+                }
+            }
+        }catch(SQLException e){
             e.printStackTrace();
             throw new Error(e);
         }finally{

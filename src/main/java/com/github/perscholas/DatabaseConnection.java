@@ -11,7 +11,7 @@ public enum DatabaseConnection implements DatabaseConnectionInterface {
     ATTENDANCE_SYSTEM,
     UAT;
 
-    private static final IOConsole console = new IOConsole(IOConsole.AnsiColor.CYAN);
+   // private static final IOConsole console = new IOConsole(IOConsole.AnsiColor.CYAN);
 
     private final ConnectionBuilder connectionBuilder;
 
@@ -63,7 +63,7 @@ public enum DatabaseConnection implements DatabaseConnectionInterface {
         } catch (Exception sqlException) {
             info = "Failed to executed statement `%s`.";
         }
-        console.println(info, sqlStatement);
+        //console.println(info, sqlStatement);
     }
 
 
@@ -101,7 +101,7 @@ public enum DatabaseConnection implements DatabaseConnectionInterface {
             sqlException.printStackTrace();
             info = "Failed to executed statement `%s`.";
         }
-        console.println(info, sqlStatement);
+       // console.println(info, sqlStatement);
     }
 
 
@@ -125,7 +125,7 @@ public enum DatabaseConnection implements DatabaseConnectionInterface {
             sqlException.printStackTrace();
             info = "Failed to executed statement `%s`.";
         }
-        console.println(info, sqlStatement);
+       // console.println(info, sqlStatement);
         return resultSet;
     }
 }

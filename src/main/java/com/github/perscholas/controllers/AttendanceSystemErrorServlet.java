@@ -43,5 +43,3 @@ public class AttendanceSystemErrorServlet extends HttpServlet {
         requestDispatcher.forward(request, response);
     }
 }
-
-

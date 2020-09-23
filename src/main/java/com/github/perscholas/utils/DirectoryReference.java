@@ -1,12 +1,8 @@
 package com.github.perscholas.utils;
 
-import java.io.File;
+// Using this file to implement to read students photos for future use
 
 /**
- * @author leonhunter
- * @created 02/12/2020 - 8:58 PM
- * used to reference files from different one or more directories
- */
 public enum DirectoryReference {
     RESOURCE_DIRECTORY(new StringBuilder()
             .append(System.getProperty("user.dir")) // local directory
@@ -30,4 +26,4 @@ public enum DirectoryReference {
     public File getFileFromDirectory(String fileName) {
         return new File(getDirectoryPath() + fileName);
     }
-}
+}**/

@@ -46,6 +46,8 @@ This project is developed based on MVC architecture and Java/J2EE.
 * Navigate to your github profile to find the _newly forked repository_.
 * Clone the repository from **your account** into the `~/dev` directory.
 * Open the newly cloned project in a code editor (Intellij, for example).
+* Create a Database "attendance_system" using SQL in "\dev\attendancesystem_mvc_project\src\main\resources\createdatabase-attedancesystem.sql" 
+* Create Tables using SQL in "\dev\attendancesystem_mvc_project\src\main\resources\createtable-attedancesystem.sql"  
 
 ####  Part 2 - Run the project ####
 * The project/module name is defined as 'attendancesystem'.
