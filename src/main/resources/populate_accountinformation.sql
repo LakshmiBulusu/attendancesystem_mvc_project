@@ -1,0 +1,1 @@
+insert into attendance_system.accountinformation (username, PASSWORD, lastloginDate) values ('test', 'test1', CURRENT_TIMESTAMP);
