@@ -30,7 +30,11 @@ This project is developed based on MVC architecture and Java/J2EE.
 	- Trello for userstories
 	- HeidiSQL - MySQL DB
 
-***Sequence Diagram for one flow(Attendance)***
+	***Sequence Diagram for one sample flow (Attendance)***
+![Usecase diagram](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/SampleSequence(Attendance).png)
+
+
+	***Database Entity Relationship Diagram ***
 ![Usecase diagram](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/SampleSequence(Attendance).png)
 
 
