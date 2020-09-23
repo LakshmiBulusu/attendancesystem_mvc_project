@@ -7,20 +7,24 @@
  1. Taking an attendance by teacher.
  2. Student can login and update personal details along with parent email ID.
 
-**User Stories**
+***User Stories***
 
 User stories are created in [Trello](https://trello.com/en-US). You have to create an account in Trello.com to access user stories and access to project in Trello. You can access [wireframes](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/classroomattendancesystem-wireframes.pdf).
+
+	***Usecase Diagram:***
+![Usecase diagram](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/Usecase.jpg)
+
 
  
 ***Technologies used:***
 
 This project is developed based on MVC architecture and Java/J2EE. 
 
-- 1. Frontend: HTML5/CSS/JS
-- 2. Controllers:Servlets 
-- 3. Model:POJO objects
-- 4. DB: Maria DB- MySQL
-- 5. Web/Application Server: Tomcat
+- Frontend: HTML5/CSS/JS
+- Controllers:Servlets 
+- Model:POJO objects
+- DB: Maria DB- MySQL
+- Web/Application Server: Tomcat
 
 
 *********************************************
