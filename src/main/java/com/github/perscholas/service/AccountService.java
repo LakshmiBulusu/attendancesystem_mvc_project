@@ -20,7 +20,6 @@ public class AccountService {
         }
     }
 
-
     public boolean isValidLogin(AccountInformation accountInformation) {
         try{
             System.out.println("Im in Account Service"+accountInformation.toString());

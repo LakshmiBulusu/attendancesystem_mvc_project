@@ -14,7 +14,6 @@ User stories are created in [Trello](https://trello.com/en-US). You have to crea
 	***Usecase Diagram:***
 ![Usecase diagram](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/Usecase.jpg)
 
-
  
 ***Technologies used:***
 
@@ -25,6 +24,11 @@ This project is developed based on MVC architecture and Java/J2EE.
 - Model:POJO objects
 - DB: Maria DB- MySQL
 - Web/Application Server: Tomcat
+- Design/IDE Tools:
+	- Intellij for Java development
+	- Lucidchart/Blasmiq -for wireframes/use-case diagram
+	- Trello for userstories
+	- HeidiSQL - MySQL DB
 
 
 *********************************************
