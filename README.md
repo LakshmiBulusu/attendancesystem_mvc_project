@@ -9,7 +9,7 @@
 
 **User Stories**
 
- 1 User stories are created in [Trello](https://trello.com/en-US). You have to create an account in Trello.com to access user stories and access to project in Trello. I have attached wireframe for reference.   
+User stories are created in [Trello](https://trello.com/en-US). You have to create an account in Trello.com to access user stories and access to project in Trello. You can access [wireframes](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/classroomattendancesystem-wireframes.pdf).
 
  
 ***Technologies used:***
@@ -22,7 +22,6 @@ This project is developed based on MVC architecture and Java/J2EE.
 - 4. DB: Maria DB- MySQL
 - 5. Web/Application Server: Tomcat
 
-Note: In future version, i'm planning to update this project with JPA and Spring Boot.
 
 *********************************************
 
