@@ -1,21 +1,22 @@
-## Welcome to Class room Attendance System Project ##
+# Welcome to Class room Attendance System Project  #
 
-**TBD**: Thanks message to per/instructors.
+Thanks to perscholas for giving me this opportunity.This was a great learning experience  to me  taught by my instructors Leon,Haseeb regarding the in-depth java programming knowledge.Thanks to their continuous support in training as a full-stack java software developer.
 
-***Project Objective:***
+## ***Project Objective:*** ##
 
- 1. Taking an attendance by teacher.
- 2. Student can login and update personal details along with parent email ID.
+-  Teacher can track the presence of a student by taking attendance and mark him in the school records. 
+-  Teacher/Student can create personal account to access this application at any time.
+-  Student can login and update personal details along with parent email ID.
 
-***User Stories***
+### ***User Stories*** ###
 
 User stories are created in [Trello](https://trello.com/en-US). You have to create an account in Trello.com to access user stories and access to project in Trello. You can access [wireframes](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/classroomattendancesystem-wireframes.pdf).
 
-	***Usecase Diagram:***
+#### ***Usecase Diagram:***  ####
 ![Usecase diagram](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/Usecase.jpg)
 
  
-***Technologies used:***
+#### ***Technologies used:*** ####
 
 This project is developed based on MVC architecture and Java/J2EE. 
 
@@ -25,50 +26,34 @@ This project is developed based on MVC architecture and Java/J2EE.
 - DB: Maria DB- MySQL
 - Web/Application Server: Tomcat
 - Design/IDE Tools:
-	- Intellij for Java development
-	- Lucidchart/Blasmiq -for wireframes/use-case diagram
+	- Intellij IDEA for Java development
+	- Lucidchart/Balsamiq for wireframes/use-case diagram
 	- Trello for userstories
 	- HeidiSQL - MySQL DB
 
-	***Sequence Diagram for one sample flow (Attendance)***
+	#### ***Sequence Diagram for one sample flow (Attendance)*** ####
 ![Sequence diagram](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/SampleSequence(Attendance).png)
 
 
-	***Database Entity Relationship Diagram ***
+	#### Database Entity Relationship Diagram ####
 ![Database diagram](https://github.com/LakshmiBulusu/attendancesystem_mvc_project/blob/master/attendancesystem_ERDiagram.PNG)
 
+###   ***How to download and run this application:*** 
+
+####  Part 1 - Clone the project ####
+* Begin by _forking_ this project into a personal repository.
+   * To do this, click the `Fork` button located at the top right of this page.
+* Navigate to your github profile to find the _newly forked repository_.
+* Clone the repository from **your account** into the `~/dev` directory.
+* Open the newly cloned project in a code editor (Intellij, for example).
+
+####  Part 2 - Run the project ####
+* The project/module name is defined as 'attendancesystem'.
+* Begin building the project/module based on code editor(ex: Build module 'attendancesystem' project in Intellij)
+* Check your JDK version is same as in .pom.xml. If you have different version then    update JDK version in pom.xml.
+* RunTomcat :run application
+* Access application:http://localhost:8080/classattendance/
+ 
 
 *********************************************
 
-
-
-
-
-
-**MarkdownPad** is a full-featured Markdown editor for Windows.
-
-### Built exclusively for Markdown ###
-
-Enjoy first-class Markdown support with easy access to  Markdown syntax and convenient keyboard shortcuts.
-
-Give them a try:
-
-- **Bold** (`Ctrl+B`) and *Italic* (`Ctrl+I`)
-- Quotes (`Ctrl+Q`)
-- Code blocks (`Ctrl+K`)
-- Headings 1, 2, 3 (`Ctrl+1`, `Ctrl+2`, `Ctrl+3`)
-- Lists (`Ctrl+U` and `Ctrl+Shift+O`)
-
-### See your changes instantly with LivePreview ###
-
-Don't guess if your [hyperlink syntax](http://markdownpad.com) is correct; LivePreview will show you exactly what your document looks like every time you press a key.
-
-### Make it your own ###
-
-Fonts, color schemes, layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.
-
-### A robust editor for advanced Markdown users ###
-
-MarkdownPad supports multiple Markdown processing engines, including standard Markdown, Markdown Extra (with Table support) and GitHub Flavored Markdown.
-
-With a tabbed document interface, PDF export, a built-in image uploader, session management, spell check, auto-save, syntax highlighting and a built-in CSS management interface, there's no limit to what you can do with MarkdownPad.
