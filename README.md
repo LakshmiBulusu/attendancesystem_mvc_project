@@ -70,8 +70,7 @@ To run application successfully, please note down below key assumptions.
 * RunTomcat :run application
 * Access application:http://localhost:8080/classattendance/
 
-####  Part 3 - Instructions ####
- 
+
 
 *********************************************
 
