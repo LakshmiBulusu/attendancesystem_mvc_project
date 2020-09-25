@@ -28,7 +28,6 @@ public class AttendanceSystemErrorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse response)
             throws ServletException, IOException {
-        // Convert request to Java object
         System.out.println("I'm in doPost method");
         processError(req,response);
 

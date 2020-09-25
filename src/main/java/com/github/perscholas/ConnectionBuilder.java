@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Created by leon on 3/13/18.
+ * Using class created by my instructor. Created by leon on 3/13/18.
  */
 public class ConnectionBuilder {
     private Integer portNumber;

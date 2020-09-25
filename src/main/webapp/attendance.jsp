@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <title> SCHOOL ATTENDANCE </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
   <link href="./css/style.css" rel="stylesheet">
   <script type="text/javascript" src="./js/school.js"></script>
 </head>

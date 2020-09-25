@@ -1,10 +1,21 @@
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+
 function verifyAttendance() {
    var attended= 0;
    var absent =0;
-   var v=document.getElementById("studentid").checked;
+   var v=document.getElementById("checkedrows");
+   if(v==null)
+   {
+	   alert("Please verify and select atleast one student to submit the attendance");
+   }
+    
+   console.log(v);
+   alert("valure of v"+v);
    if(v==true)
      attended++;
-   else
+   /**else
      absent++;
    var u=document.getElementById("studentid").checked;
    if(u==true)
@@ -25,7 +36,7 @@ function verifyAttendance() {
     if(b==true)
       attended++;
     else
-      absent++;
+      absent++;**/
     alert(
     "Total #of students in class "+eval(attended+absent)+"\n"+
     "Total #of students presented "+attended+"\n"+

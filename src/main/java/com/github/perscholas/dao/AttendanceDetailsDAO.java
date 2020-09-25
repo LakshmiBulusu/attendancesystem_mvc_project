@@ -51,9 +51,8 @@ public class AttendanceDetailsDAO {
             e.printStackTrace();
             throw new Error(e);
         }finally{
-            //   con.close();
+            //TBD Need to close connection/result set
 
         }
     }
-
 }

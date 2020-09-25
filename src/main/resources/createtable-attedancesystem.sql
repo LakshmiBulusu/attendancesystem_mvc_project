@@ -29,7 +29,7 @@ create table attendance_system.teacherdetails
 
 create table attendance_system.attendancedetails
 (
-   ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	studentid INT NOT NULL,
 	teacherid INT NOT NULL,
 	attendancedate DATETIME NOT NULL,

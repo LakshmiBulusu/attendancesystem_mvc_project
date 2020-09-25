@@ -24,14 +24,11 @@ public class AttendanceSystemServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        System.out.println("I'm in Init method");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("I'm in doGet method");
-       // doPost(req,response);
     }
 
     @Override
@@ -82,63 +79,81 @@ public class AttendanceSystemServlet extends HttpServlet {
                    requestDispatcher.forward(request, response);
                }
            } else if ("accountcreation".equals(pagename)) {
-               String userName = request.getParameter("username");
-               String password = request.getParameter("password");
-               System.out.println("I'm in AccountCreation " + userName + password);
-               AccountInformation accountInformation = new AccountInformation();
-               accountInformation.setUsername(userName);
-               accountInformation.setPassword(password);
-
-               //Calling AccountService
-               AccountService service = new AccountService();
-               service.createAccountInformation(accountInformation);
-               RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.html");
-               requestDispatcher.forward(request, response);
-
+               createAccount(request,response,pagename);
            } else if ("attendance".equals(pagename)) {
-               String[] s = request.getParameterValues("checkedrows");
-               if (s != null && s.length != 0) {
-                   System.out.println("The Total student attended" + s.length);
-
-                   //Calling AttendanceDetailsService
-                   AttendanceDetailsService attendanceDetailsService = new AttendanceDetailsService();
-                   List<AttendanceDetails> attendenanceDetailsList = new ArrayList();
-
-                   for (int i = 0; i < s.length; i++) {
-                       System.out.println("The student attended" + s[i]);
-                       AttendanceDetails attendanceDetails = new AttendanceDetails();
-                       attendanceDetails.setStudenid(Integer.valueOf(s[i]));
-                       attendanceDetails.setTeacherid("5000");
-                       attendenanceDetailsList.add(attendanceDetails);
-                   }
-                   attendanceDetailsService.createAttendanceDetails(attendenanceDetailsList);
-                   RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.html");
-                   requestDispatcher.forward(request, response);
-               }else{
-                   request.setAttribute("Message", "Please access again and select a student.");
-                   RequestDispatcher requestDispatcher = request.getRequestDispatcher("/error.jsp");
-                   requestDispatcher.forward(request, response);
-               }
+               updateAttendance(request,response,pagename);
            } else if ("studentdetails".equals(pagename)) {
-               String studentid = request.getParameter("studentid");
-               String address = request.getParameter("address");
-               String emergencycontact = request.getParameter("emergencycontact");
-               String parentemailid = request.getParameter("parentemailid");
-               System.out.println("I'm in Student Details " + studentid + " " + address + emergencycontact + parentemailid);
-
-               StudentDetails studentDetails = new StudentDetails();
-               studentDetails.setStudentid(Integer.parseInt(studentid));
-               studentDetails.setAddress(address);
-               studentDetails.setEmergencycontact(emergencycontact);
-               studentDetails.setParentemailid(parentemailid);
-
-               StudentDetailsService studentDetailsService = new StudentDetailsService();
-               studentDetailsService.updateStudentdetails(studentDetails);
-               RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.html");
-               requestDispatcher.forward(request, response);
-
+               updateStudentDetails(request,response,pagename);
            }
        }
+
+
+       private void updateAttendance(HttpServletRequest request,HttpServletResponse response, String pagename)
+               throws ServletException, IOException {
+
+           String[] s = request.getParameterValues("checkedrows");
+           if (s != null && s.length != 0) {
+               System.out.println("The Total student attended" + s.length);
+
+               //Calling AttendanceDetailsService
+               AttendanceDetailsService attendanceDetailsService = new AttendanceDetailsService();
+               List<AttendanceDetails> attendenanceDetailsList = new ArrayList();
+
+               for (int i = 0; i < s.length; i++) {
+                   System.out.println("The student attended" + s[i]);
+                   AttendanceDetails attendanceDetails = new AttendanceDetails();
+                   attendanceDetails.setStudenid(Integer.valueOf(s[i]));
+                   attendanceDetails.setTeacherid("5000");
+                   attendenanceDetailsList.add(attendanceDetails);
+               }
+               attendanceDetailsService.createAttendanceDetails(attendenanceDetailsList);
+               RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.html");
+               requestDispatcher.forward(request, response);
+           }else{
+               request.setAttribute("Message", "Please access again and select a student.");
+               RequestDispatcher requestDispatcher = request.getRequestDispatcher("/error.jsp");
+               requestDispatcher.forward(request, response);
+           }
+
+       }
+
+       private void updateStudentDetails(HttpServletRequest request,HttpServletResponse response, String pagename)
+               throws ServletException, IOException {
+
+           String studentid = request.getParameter("studentid");
+           String address = request.getParameter("address");
+           String emergencycontact = request.getParameter("emergencycontact");
+           String parentemailid = request.getParameter("parentemailid");
+           System.out.println("I'm in Student Details " + studentid + " " + address + emergencycontact + parentemailid);
+
+           StudentDetails studentDetails = new StudentDetails();
+           studentDetails.setStudentid(Integer.parseInt(studentid));
+           studentDetails.setAddress(address);
+           studentDetails.setEmergencycontact(emergencycontact);
+           studentDetails.setParentemailid(parentemailid);
+
+           StudentDetailsService studentDetailsService = new StudentDetailsService();
+           studentDetailsService.updateStudentdetails(studentDetails);
+           RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.html");
+           requestDispatcher.forward(request, response);
+       }
+
+    private void createAccount(HttpServletRequest request,HttpServletResponse response, String pagename)
+            throws ServletException, IOException {
+
+            String userName = request.getParameter("username");
+            String password = request.getParameter("password");
+            System.out.println("I'm in AccountCreation " + userName + password);
+            AccountInformation accountInformation = new AccountInformation();
+            accountInformation.setUsername(userName);
+            accountInformation.setPassword(password);
+
+            //Calling AccountService
+            AccountService service = new AccountService();
+            service.createAccountInformation(accountInformation);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.html");
+            requestDispatcher.forward(request, response);
+    }
  }
 
 

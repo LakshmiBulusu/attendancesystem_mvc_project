@@ -5,15 +5,13 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- * Created by leon on 2/18/2020.
+ * Using class created by my instructor.
  */
 public enum DatabaseConnection implements DatabaseConnectionInterface {
-    ATTENDANCE_SYSTEM,
-    UAT;
 
-   // private static final IOConsole console = new IOConsole(IOConsole.AnsiColor.CYAN);
+    ATTENDANCE_SYSTEM;
 
-    private final ConnectionBuilder connectionBuilder;
+     private final ConnectionBuilder connectionBuilder;
 
     DatabaseConnection(ConnectionBuilder connectionBuilder) {
 
@@ -63,8 +61,7 @@ public enum DatabaseConnection implements DatabaseConnectionInterface {
         } catch (Exception sqlException) {
             info = "Failed to executed statement `%s`.";
         }
-        //console.println(info, sqlStatement);
-    }
+     }
 
 
     public void drop() {
@@ -125,7 +122,6 @@ public enum DatabaseConnection implements DatabaseConnectionInterface {
             sqlException.printStackTrace();
             info = "Failed to executed statement `%s`.";
         }
-       // console.println(info, sqlStatement);
-        return resultSet;
+           return resultSet;
     }
 }

@@ -31,7 +31,7 @@ public class StudentDetailsDAO {
             JdbcConfigurator.initialize();
             System.out.println("Im'm StudentDetailsDAO getStudentDetails");
             Connection con  = dbc.getDatabaseConnection();
-            String selectSQL="SELECT studentid,firstname,lastname,photoname,emergencycontact FROM attendance_system.studentdetails;";
+            String selectSQL="SELECT studentid,firstname,lastname,parentemailid,photoname,emergencycontact FROM attendance_system.studentdetails;";
             Statement insertAccount = con.createStatement();
             ResultSet resultSet=insertAccount.executeQuery(selectSQL);
             if (resultSet != null) {
@@ -41,12 +41,14 @@ public class StudentDetailsDAO {
                     int studentId = resultSet.getInt(1);
                     String firstName = resultSet.getString(2);
                     String lastName = resultSet.getString(3);
-                    String photoName = resultSet.getString(4);
-                    String emergencycontact = resultSet.getString(5);
+                    String parentemailid = resultSet.getString(4);
+                    String photoname = resultSet.getString(5);
+                    String emergencycontact = resultSet.getString(6);
                     student.setStudentid(studentId);
                     student.setFirstname(firstName);
                     student.setLastname(lastName);
-                    student.setPhotoname(photoName);
+                    student.setParentemailid(parentemailid);
+                    student.setPhotoname(photoname);
                     student.setEmergencycontact(emergencycontact);
                     //System.out.println(student.toString());
                     listStudent.add(student);
@@ -83,11 +85,7 @@ public class StudentDetailsDAO {
             e.printStackTrace();
             throw new Error(e);
         }finally{
-            //   con.close();
-
+            //TBD Need to close connection/result set
         }
     }
-
-
-
 }
